@@ -1,0 +1,31 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.tiendas {
+    align-self: center;
+
+    &__heading,
+    &__descripcion {
+        text-align: center;
+        color: v.$secundario;
+    }
+
+    &__heading {
+        margin: 2rem 0;
+    }
+
+    &__descripcion {
+        margin-bottom: 3rem;
+    }
+
+    &__grid {
+        @include m.grid(2, 2rem);
+    }
+
+    &__enlace {
+        transition: transform 0.2s;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
